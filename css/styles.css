@@ -69,6 +69,7 @@ img{
 }
 .link {
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover {
@@ -114,6 +115,7 @@ img{
     letter-spacing: 0.02em;
     color: var(--text-color);
     display: flex;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover {
@@ -171,6 +173,7 @@ img{
     display: flex;
     padding-bottom: 24px;
     padding-top: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover {
@@ -232,6 +235,7 @@ img{
     border: none; 
     border-radius: 4px;
     margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 
 
@@ -411,7 +415,9 @@ display: flex;
     letter-spacing: 0.04em;
     color: var(--Primary-Brand);
     background-color: var(--Light);
-    
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1),background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .btn-portfolio:hover {
@@ -437,6 +443,7 @@ display: flex;
 
     .link-portfolio{
         display: block;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .link-portfolio:hover {
         box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -496,6 +503,7 @@ height: 40px;
     height: 100%;
     background-color: var(--Primary-Brand);
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:hover,
 .socials-link:focus{
@@ -534,7 +542,7 @@ height: 40px;
 }
 .customers-icons {
   fill:currentColor;
-  
+  transition:fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
@@ -552,6 +560,7 @@ height: 40px;
     border: 1px solid #8E8F99;   
     border-radius: 4px;
     color: #8e8f99;
+    transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1),border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:hover,
 .customers-link:focus{
@@ -609,6 +618,7 @@ margin-bottom: 16px;
        height: 40px;
        background-color: var(--Primary-Brand);
        border-radius: 50%;
+       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 
    .socials-link-footer:hover,
