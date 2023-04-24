@@ -1,4 +1,5 @@
 :root {
+    /* Color */
     --text-color: #434455;
     --Primary-Brand: #4D5AE5;
     --Pressed-state: #404BBF;
@@ -11,6 +12,11 @@
     --Hero-background: #2E2F42;
     --White-background: #FFFFFF;
     --Modal-background: #FCFCFC;
+
+    /* Others */
+     --header-idx: 10;
+     --modal--idx: 100;
+
 }
 .container {
     width:1158px;
@@ -60,9 +66,11 @@ img{
 
 /* Header section   */
 .header{ 
-    /* position: fixed;
+    position: fixed;
     top: 0;
-    width: 100%; */
+    z-index: var(--header-idx);
+    width: 100%;
+    
     border-bottom: 1px solid #e7e9fc;
     gap: 40px;
     display: flex;
@@ -460,6 +468,38 @@ display: flex;
 .img-portfolio{
     width: calc((100% - 48px) / 3);    
     }
+    .overlay-portfolio{
+        position: absolute;
+        top:0;        
+        left: 0;
+        transform: translateY(100%);
+
+
+        width: 100%;
+        height: 100%;
+        padding:30px;
+        border-radius: 10px;
+        background-color:rgba(32, 32, 228, 0.7);
+        backdrop-filter: blur(2px);
+        display: flex;
+        align-items: center;justify-content: start;
+        transition:transform var(--header-idx);
+    }
+
+.img-portfolio:hover .overlay {
+    transform: translateY(0);
+   
+}
+    .overlay-label{
+        color: var(--Accent);
+        
+        text-align: centerl;
+    }
+       .portfolio-box{
+        position: relative;
+
+       }
+       .portfolio-box:hover
 
     .link-portfolio{
         display: block;
@@ -647,25 +687,36 @@ margin-bottom: 16px;
 
        /* Modal styles */
            .backdrop {
+           display:none;
            position:fixed;
            top:0;
            left:0;
+           z-index: var(--modal--idx);
+           right:0;
+           bottom:0;
            width: 100%;
            height: 100%;
            
            backdrop-filter: blur (6px);
+           }
+           .is-hidden{
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
            }
 
            .modal {
            position:absolute;
            top: calc(50%-204px);
            left:calc(50%-292);
+           z-index:var(--modal--idx);
 
            width: 408px;
            min-height: 584px;
 
          
            background-color: var(--Modal-background);
+           border-radius: 10px;
           }
            .modal-btn {
             position: absolute;
@@ -674,6 +725,7 @@ margin-bottom: 16px;
 
 
             display: block;
+            margin-top: auto;
             width: 24px;
             height: 24px;
             background-color:var(--Pressed-state);
