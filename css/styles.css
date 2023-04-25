@@ -699,16 +699,21 @@ margin-bottom: 16px;
            
            backdrop-filter: blur (6px);
            }
-           .is-hidden{
+            .backdrop.is-hidden{
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
            }
+           .backdrop.is-hidden .modal{
+
+
+           }
 
            .modal {
            position:absolute;
-           top: calc(50%-204px);
-           left:calc(50%-292);
+           top: 50%;
+           left:50%;
+           transform:translate(-50%,-50%);
            z-index:var(--modal--idx);
 
            width: 408px;
