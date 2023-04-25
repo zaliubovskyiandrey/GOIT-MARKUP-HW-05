@@ -648,9 +648,7 @@ height: 40px;
     padding-right: 15px; 
     gap: 120px;
 }
-.webstudio-footer{
-     /* margin-right: 120px; */
-}
+
 .social-title-footer{
 font-weight: 500;
 font-size: 16px;
@@ -705,10 +703,7 @@ margin-bottom: 16px;
             visibility: hidden;
             pointer-events: none;
            }
-           .backdrop.is-hidden .modal{
-
-
-           }
+           
 
            .modal {
            position:absolute;
